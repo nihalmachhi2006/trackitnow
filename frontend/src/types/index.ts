@@ -90,12 +90,17 @@ export interface Friend {
 }
 
 export interface FriendRequest {
-  id: number;
-  user_id: number;
-  friend_id: number;
-  status: string;
-  created_at: string;
-  user?: Friend;
+  id: number
+  user_id: number
+  friend_id: number
+  status: string
+  created_at: string
+  user: {           // ← add this if missing
+    id: number
+    username: string
+    display_name: string
+    avatar_url?: string
+  }
 }
 
 // ===========================
